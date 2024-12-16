@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: green;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Processing</h1>
+        <p><strong>Transaction ID:</strong> TXN987654321</p>
+        <p><strong>Amount:</strong> ₹50,000</p>
+        <p><strong>Status:</strong> Pending Verification</p>
+        <p>To complete the transaction, kindly verify your payment.</p>
+        <button onclick="verifyPayment()">Verify Payment</button>
+        <p id="errorMessage" class="message">We didn't receive payment confirmation, kindly complete the payment.</p>
+    </div>
+
+    <script>
+        function verifyPayment() {
+            // Show the error message when the button is clicked
+            document.getElementById('errorMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
